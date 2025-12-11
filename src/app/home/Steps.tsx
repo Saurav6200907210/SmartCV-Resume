@@ -11,18 +11,15 @@ export const Steps = () => {
       <div className="mt-8 flex justify-center">
         <dl className="flex flex-col gap-y-10 lg:flex-row lg:justify-center lg:gap-x-20">
           {STEPS.map(({ title, text }, idx) => (
-            <div className="relative self-start pl-14" key={idx}>
-              <dt className="text-lg font-bold">
-                <div className="bg-primary absolute left-0 top-1 flex h-10 w-10 select-none items-center justify-center rounded-full p-[3.5px] opacity-80">
-                  <div className="flex h-full w-full items-center justify-center rounded-full bg-white">
-                    <div className="text-primary -mt-0.5 text-2xl">
-                      {idx + 1}
-                    </div>
-                  </div>
-                </div>
-                {title}
-              </dt>
-              <dd>{text}</dd>
+            <div
+              className="relative flex flex-col justify-center rounded-xl p-6 transition-all duration-300 hover:scale-105 hover:bg-white hover:shadow-xl"
+              key={idx}
+            >
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary text-2xl font-bold text-white shadow-md">
+                {idx + 1}
+              </div>
+              <dt className="text-xl font-bold text-gray-900">{title}</dt>
+              <dd className="mt-2 text-gray-600">{text}</dd>
             </div>
           ))}
         </dl>

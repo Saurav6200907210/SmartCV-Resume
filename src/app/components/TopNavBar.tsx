@@ -17,7 +17,7 @@ export const TopNavBar = () => {
     >
       <div className="flex h-10 w-full items-center justify-between">
         <Link href="/">
-          <div className="flex items-center justify-center gap-1">
+          <div className="flex items-center justify-center gap-1 transition-transform duration-200 hover:scale-105">
             <span className="text-2xl font-bold text-gray-900">SmartCV</span>
           </div>
         </Link>
@@ -27,11 +27,11 @@ export const TopNavBar = () => {
         >
           {[
             ["/resume-builder", "Builder"],
-            ["https://github.com/Saurav6200907210/SmartCV", "GitHub"],
+            ["https://github.com/Saurav6200907210/SmartCV-Resume", "GitHub"],
           ].map(([href, text]) => (
             <Link
               key={text}
-              className="rounded-md px-1.5 py-2 text-gray-500 hover:bg-gray-100 focus-visible:bg-gray-100 lg:px-4"
+              className="rounded-md px-1.5 py-2 text-gray-500 transition-all duration-200 hover:bg-gray-100 hover:text-gray-900 focus-visible:bg-gray-100 lg:px-4"
               href={href}
             >
               {text}
